@@ -176,8 +176,9 @@ footer{
     #logotipo img{
         width: 90%;
     }
-    #main4{
-        padding-top: 87%;
+    #maint{
+     
+        padding-bottom: 115%;
     }
     #midias2{
         padding-left: 10%;
@@ -187,7 +188,6 @@ footer{
         margin-right: 7%;
         width: 8%;
     }
-        
 }
 
 @media (max-width: 1920px) {
@@ -204,7 +204,8 @@ footer{
         
             
 }
-        
+
+
         
         
         
