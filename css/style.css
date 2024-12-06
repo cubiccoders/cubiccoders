@@ -189,9 +189,11 @@ footer{
             margin: 0;
             padding: 0;
     }
+
     header{
-        width: 100vw;
+        width: 100%;
     }
+
     #main1-b, #main1-c {
         padding: 0; 
         margin: 0 auto; 
@@ -208,18 +210,53 @@ footer{
 
 
     #logotipo img{
-        max-width: 50%; 
+        max-width: 80%; 
         height: auto; 
     }
+
+    #frase1 {
+        padding-top: 50%;
+        text-align: center;
+        font-family: NunitoSansL;
+        font-size: 120%;
+    }
+
+    #frase2, #frase3{
+        padding-top: 15%;
+        text-align: center;
+        font-family: NunitoSansL;
+        font-size: 120%;
+    }
+
+    #foto1, #foto2, #foto3{
+        padding-top: 8%;
+        padding-bottom: 18%;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+    }
     
+    #p{
+        font-size: 70%;
+    }
+
+    #midias1 img{
+        width: 9%;
+    }
     #midias2{
-        padding-left: 10%;
+        padding-left: 9%;
     
     }
     #midias2 img{
         margin-right: 7%;
-        width: 8%;
+        width: 9%;
     }
+    #produzidopor{
+        font-size: 60%;
+        padding-bottom: 2%;
+    }
+    
+    
 }
 
 @media (max-width: 1920px) {
