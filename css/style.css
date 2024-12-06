@@ -46,10 +46,12 @@ header {
     position: fixed; 
     top: 0;          
     left: 0;       
-    width: 100%;     
+    width: 100vw;     
     z-index: 1000;   
     background-color: #2E2E2E; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    box-sizing: border-box; 
 }
 
 
@@ -57,14 +59,19 @@ header {
     background-color:#2E2E2E;
     display: flex; 
     justify-content: center; 
-    align-items: center; 
+    align-items: center;
+    margin: 0;
+    padding: 0; 
 }
 
 #logotipo img{
-    width: 30%;
+    max-width: 32%; 
+    height: auto;
+  
 }
+
 #main1-a {
-    padding-top: 12%; 
+    padding-top: 11%; 
 }
 #main1-a, #main1-b, #main1-c {
     opacity: 0;
@@ -100,6 +107,10 @@ header {
 }
 #main2, #main3 {
     display: none;
+}
+#main4 img {
+    max-width: 100%; 
+    height: auto;    
 }
 #main4 img{
     width: 100%;
@@ -172,18 +183,34 @@ footer{
 
 }
 
-
-
-
 @media (max-width: 767px) {
     body {
             overflow-x: hidden;
+            margin: 0;
+            padding: 0;
     }
-    #logotipo img {
-        width: 50%; 
-        max-width: none; 
+    header{
+        width: 100vw;
     }
-     
+    #main1-b, #main1-c {
+        padding: 0; 
+        margin: 0 auto; 
+    }
+
+    .row {
+        flex-wrap: wrap; 
+        width: 100%; 
+    }
+
+    .col-md-6 {
+        width: 100%; 
+    }
+
+
+    #logotipo img{
+        max-width: 50%; 
+        height: auto; 
+    }
     
     #midias2{
         padding-left: 10%;
