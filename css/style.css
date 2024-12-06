@@ -42,6 +42,15 @@ body {
     font-family: OpenSansB;
     src: url(../letras/OpenSans-Bold.ttf);
 }
+header {
+    position: fixed; 
+    top: 0;          
+    left: 0;       
+    width: 100%;     
+    z-index: 1000;   
+    background-color: #2E2E2E; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+}
 
 
 #logotipo{
@@ -54,34 +63,28 @@ body {
 #logotipo img{
     width: 30%;
 }
-#main1-a, #main1-b, #main1-c {
-    position: absolute;
-    width: 100%; 
-    height: 100%; 
-    opacity: 0; 
-    visibility: hidden; 
-    transition: opacity 1s ease-in-out, visibility 0s 1s;
-     
+#main1-a {
+    padding-top: 12%; 
 }
-
+#main1-a, #main1-b, #main1-c {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 3s ease-in-out, transform 3s ease-in-out;
+    visibility: hidden;
+}
 
 #main1-a.visible, #main1-b.visible, #main1-c.visible {
     opacity: 1;
+    transform: translateY(0);
     visibility: visible;
-    transition: opacity 3s ease-in-out,visibility 0s 0s;
-    
 }
-#main2{
-    padding-top: 33%;
-}
-
 
 #frase1, #frase2, #frase3{
-    padding-top: 15%;
+    padding-top: 11%;
     padding-left: 15%;
     padding-right: 10%;
     font-family: NunitoSansL;
-    font-size: 120%;
+    font-size: 150%;
 }
 
 #foto1, #foto2, #foto3{
@@ -93,7 +96,10 @@ body {
 }
 
 #foto1 img, #foto2 img, #foto3 img{
-    width: 60%; 
+    width: 70%; 
+}
+#main2, #main3 {
+    display: none;
 }
 #main4 img{
     width: 100%;
@@ -173,13 +179,12 @@ footer{
     body {
             overflow-x: hidden;
     }
-    #logotipo img{
-        width: 90%;
+    #logotipo img {
+        width: 50%; 
+        max-width: none; 
     }
-    #maint{
      
-        padding-bottom: 110%;
-    }
+    
     #midias2{
         padding-left: 10%;
     
@@ -194,12 +199,19 @@ footer{
     body {
             overflow-x: hidden;
      }
-     #main2{
-        padding-top: 35.9%;
+     
+     
+    #main1-a {
+        padding-top: 14%; 
     }
     
     #foto1 img, #foto2 img, #foto3 img{
         width: 60%; 
+    }
+
+
+    #main4 img{
+        width: 110%;
     }
         
             

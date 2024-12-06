@@ -90,9 +90,7 @@
             
 
         </div>
-        <div id="maint">
-
-        </div>
+        
         <div id="main2" >
             <div class="row">
                    
@@ -192,43 +190,27 @@
     </footer>
     <script>
 
-const sections = ["#main1-a", "#main1-b", "#main1-c"];
-let currentSectionIndex = 0;
-
-function showSection(sectionToShow) {
-    sections.forEach((section) => {
-        const element = document.querySelector(section);
-        if (section === sectionToShow) {
-            element.classList.add("visible");
-        } else {
-            element.classList.remove("visible");
-        }
+document.addEventListener("DOMContentLoaded", function () {
+        // Faz a primeira seção aparecer imediatamente
+        document.querySelector("#main1-a").classList.add("visible");
     });
-}
 
-function cycleSections() {
-    const nextSection = sections[currentSectionIndex];
-    showSection(nextSection);
+    document.addEventListener("scroll", function () {
+        const sections = ["#main1-a", "#main1-b", "#main1-c"];
+        const windowHeight = window.innerHeight;
 
-    
-    currentSectionIndex++;
+        sections.forEach((sectionId, index) => {
+            const section = document.querySelector(sectionId);
+            const elementTop = section.getBoundingClientRect().top;
 
-    
-    if (currentSectionIndex >= sections.length) {
-        currentSectionIndex = 0;
-
-        
-        setTimeout(cycleSections, 7000); 
-    } else {
-        
-        setTimeout(cycleSections, 5000); 
-    }
-}
-
-
-showSection(sections[currentSectionIndex]);
-cycleSections();
-
+            // Só ativa a seção se estiver no viewport e se as anteriores já apareceram
+            if (elementTop <= windowHeight - 100) {
+                if (index === 0 || document.querySelector(sections[index - 1]).classList.contains("visible")) {
+                    section.classList.add("visible");
+                }
+            }
+        });
+    });
     </script>
     
 </body>
