@@ -40,9 +40,6 @@
     font-family: OpenSansB;
     src: url(../letras/OpenSans-Bold.ttf);
 }
-* {
-    outline: 1px solid red; /* Destaca todas as bordas */
-}
 
 header {
     position: fixed; 
