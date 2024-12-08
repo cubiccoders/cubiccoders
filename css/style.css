@@ -4,9 +4,7 @@
     padding:0;
 }
 
-body {
-    overflow-x: hidden;
-}
+
 
 @font-face {
     font-family: NunitoSansL;
@@ -42,26 +40,30 @@ body {
     font-family: OpenSansB;
     src: url(../letras/OpenSans-Bold.ttf);
 }
+* {
+    outline: 1px solid red; /* Destaca todas as bordas */
+}
+
 header {
     position: fixed; 
-    top: 0;          
-    left: 0;       
-    width: 100vw;     
+    top: 0;               
+    width: 100%;     
     z-index: 1000;   
     background-color: #2E2E2E; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     box-sizing: border-box; 
+    
 }
 
-
 #logotipo{
-    background-color:#2E2E2E;
     display: flex; 
     justify-content: center; 
     align-items: center;
     margin: 0;
-    padding: 0; 
+    padding: 0;
+    height: 100%; 
+    width: 100%; 
 }
 
 #logotipo img{
@@ -87,7 +89,7 @@ header {
 }
 
 #frase1, #frase2, #frase3{
-    padding-top: 11%;
+    padding-top: 13%;
     padding-left: 15%;
     padding-right: 10%;
     font-family: NunitoSansL;
@@ -105,51 +107,76 @@ header {
 #foto1 img, #foto2 img, #foto3 img{
     width: 70%; 
 }
+
 #main2, #main3 {
     display: none;
 }
+#logotipo{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+    width: 100%; 
+}
+#main4{
+    background-color:#2E2E2E;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin: 0;
+    padding: 0; 
+    height: 100%; 
+    width: 100%; 
+}
+
 #main4 img {
     max-width: 100%; 
     height: auto;    
 }
-#main4 img{
-    width: 100%;
-   
-}
+
 footer{
     padding-top: 2%;
     background-color :#2E2E2E;
  
 }
+
 #midias1{
     padding-top: 1%;
     padding-left: 10%;
 
 }
+
 #midias1 img{
     width: 6%;
     margin-right: 2%;
     
 }
-#midias2{
-    padding-left: 25%;
 
-}
-#midias2 img{
-    margin-right: 5%;
-    width: 10%;
-}
-#p{
+#pmidias1{
     font-family: NunitoSansR;
     color:white;
     transition: transform 0.5s ease-out; 
     
 }
-#p:hover{
+
+#pmidias1:hover{
     transform: scale(1.03); 
     transition: transform 0.1s ease-in; 
       
 }
+
+#midias2{
+    padding-left: 25%;
+
+}
+
+#midias2 img{
+    margin-right: 5%;
+    width: 10%;
+}
+
 #afacebook img, #ainstagram img, #agithub img{
     transition: transform 0.5s ease-out; 
 }
@@ -159,7 +186,6 @@ footer{
     transition: transform 0.1s ease-in; 
 }
 
-
 #produzidopor{
     color: white;
     font-family:NunitoSansR;
@@ -168,6 +194,7 @@ footer{
     font-size: 80%;
    
 }
+
 #produzidopor hr {
     margin: 10px auto;
     width: 90%;
@@ -184,31 +211,7 @@ footer{
 }
 
 @media (max-width: 767px) {
-    body {
-            overflow-x: hidden;
-            margin: 0;
-            padding: 0;
-    }
-
-    header{
-        width: 100%;
-    }
-
-    #main1-b, #main1-c {
-        padding: 0; 
-        margin: 0 auto; 
-    }
-
-    .row {
-        flex-wrap: wrap; 
-        width: 100%; 
-    }
-
-    .col-md-6 {
-        width: 100%; 
-    }
-
-
+    
     #logotipo img{
         max-width: 80%; 
         height: auto; 
@@ -218,14 +221,14 @@ footer{
         padding-top: 50%;
         text-align: center;
         font-family: NunitoSansL;
-        font-size: 120%;
+        font-size: 110%;
     }
 
     #frase2, #frase3{
         padding-top: 15%;
         text-align: center;
         font-family: NunitoSansL;
-        font-size: 120%;
+        font-size: 110%;
     }
 
     #foto1, #foto2, #foto3{
@@ -235,21 +238,35 @@ footer{
         justify-content: center; 
         align-items: center; 
     }
-    
-    #p{
+
+    #main4 img {
+        max-width: 100%; 
+        height:auto;  
+    }
+        
+    #pmidias1{
         font-size: 70%;
+
     }
 
     #midias1 img{
         width: 9%;
+
     }
+
     #midias2{
         padding-left: 9%;
     
     }
+
     #midias2 img{
         margin-right: 7%;
         width: 9%;
+    }
+    #produzidopor hr {
+        margin-top: -10px;
+        width: 90%;
+    
     }
     #produzidopor{
         font-size: 60%;
@@ -259,25 +276,15 @@ footer{
     
 }
 
-@media (max-width: 1920px) {
-    body {
-            overflow-x: hidden;
-     }
-     
-     
+@media (min-width: 1910px) {
+    
     #main1-a {
-        padding-top: 14%; 
+        padding-top: 15%; 
     }
     
     #foto1 img, #foto2 img, #foto3 img{
         width: 60%; 
     }
-
-
-    #main4 img{
-        width: 110%;
-    }
-        
             
 }
 
