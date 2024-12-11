@@ -41,6 +41,31 @@
     src: url(../letras/OpenSans-Bold.ttf);
 }
 
+@font-face {
+    font-family: ManropeSB;
+    src: url(../letras/Manrope-SemiBold.otf
+    );
+}
+@font-face {
+    font-family: MulishR;
+    src: url(../letras/Mulish-Regular.ttf);
+}
+
+@font-face {
+    font-family: OutfitB;
+    src: url(../letras/Outfit-Bold.ttf);
+}
+
+@font-face {
+    font-family: SoraM;
+    src: url(../letras/Sora-Medium.ttf);
+}
+
+@font-face {
+    font-family: WorkSansL;
+    src: url(../letras/WorkSans-Light.otf);
+}
+
 header {
     position: fixed; 
     top: 0;               
@@ -89,7 +114,7 @@ header {
     padding-top: 13%;
     padding-left: 15%;
     padding-right: 10%;
-    font-family: NunitoSansL;
+    font-family:WorkSansL ;
     font-size: 150%;
 }
 
@@ -152,7 +177,7 @@ footer{
 }
 
 #pmidias1{
-    font-family: NunitoSansR;
+    font-family: MulishR;
     color:white;
     transition: transform 0.5s ease-out; 
     
@@ -185,7 +210,7 @@ footer{
 
 #produzidopor{
     color: white;
-    font-family:NunitoSansR;
+    font-family:WorkSansL;
     text-align: center;
     padding-bottom: 1%;
     font-size: 80%;
@@ -217,14 +242,14 @@ footer{
     #frase1 {
         padding-top: 50%;
         text-align: center;
-        font-family: NunitoSansL;
+        font-family: WorkSansL;
         font-size: 110%;
     }
 
     #frase2, #frase3{
         padding-top: 15%;
         text-align: center;
-        font-family: NunitoSansL;
+        font-family: WorkSansL;
         font-size: 110%;
     }
 
