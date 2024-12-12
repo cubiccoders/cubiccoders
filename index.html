@@ -139,23 +139,40 @@
             <a href="https://cubiccoders.com/CubicCoders/" id="empresa"  style="text-decoration: none">CUBIC CODERS</a>-2024
         </div>
     </footer>
+    
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            document.querySelector("#main1-a").classList.add("visible");});
-
+            
+            document.querySelector("#main1-a").classList.add("visible");
+        });
+    
+        let lastScrollY = window.scrollY; 
+    
         document.addEventListener("scroll", function () {
             const sections = ["#main1-a", "#main1-b", "#main1-c"];
             const windowHeight = window.innerHeight;
+            const currentScrollY = window.scrollY; 
+            const scrollingDown = currentScrollY > lastScrollY; 
+    
             sections.forEach((sectionId, index) => {
                 const section = document.querySelector(sectionId);
-                const elementTop = section.getBoundingClientRect().top;
-                if (elementTop <= windowHeight - 100) {
-                    if (index === 0 || document.querySelector(sections[index - 1]).classList.contains("visible")
-                    ) {section.classList.add("visible");}
-                }}
-            );
+                const rect = section.getBoundingClientRect();
+    
+                if (scrollingDown) {
+                   
+                    if (rect.top <= windowHeight - 100) {
+                        section.classList.add("visible");
+                    }
+                } else {
+                    
+                    if (rect.top > windowHeight / 2) {
+                        section.classList.remove("visible");
+                    }
+                }
+            });
+    
+            lastScrollY = currentScrollY; 
         });
-
     </script>
     
 </body>
