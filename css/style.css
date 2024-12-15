@@ -5,7 +5,6 @@
 }
 
 
-
 @font-face {
     font-family: NunitoSansL;
     src: url(../letras/NunitoSans-Light.ttf);
@@ -67,7 +66,7 @@
 }
 
 header {
-    position: fixed; 
+    position: sticky; 
     top: 0;               
     width: 100%;     
     z-index: 1000;   
@@ -94,9 +93,6 @@ header {
   
 }
 
-#main1-a {
-    padding-top: 11%; 
-}
 #main1-a, #main1-b, #main1-c {
     opacity: 0;
     transform: translateY(50px);
@@ -124,39 +120,83 @@ header {
     padding-bottom: 7%;
     display: flex; 
     justify-content: center; 
-    align-items: center; 
+    align-items: center;
+
 }
 
 #foto1 img, #foto2 img, #foto3 img{
-    width: 70%; 
+    width: 70%;
 }
 
-#main2, #main3 {
-    display: none;
+#main2{
+    background-color: #2E2E2E;
+    color: black;
+    justify-content: center;
+    text-align: center; 
+    
 }
-#logotipo{
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    height: 100%; 
-    width: 100%; 
+
+#col1-2i,#col2-2i,#col3-2i,#col4-2i{
+    
+    border-radius: 10%;
+    background-color: white;
+    
 }
+
+#col1-2,#col2-2,#col3-2,#col4-2{
+    padding-left:5% ;
+    padding-right:5% ;
+    padding-bottom: 10%;  
+    
+}
+
+#main3{
+    text-align: center; 
+    background-color:white;
+    color: white;
+   
+}
+
+#col1-3i,#col2-3i,#col3-3i,#col4-3i{
+    border-radius: 10%;
+    background-color:#2E2E2E ;
+}
+
+#col1-3,#col2-3,#col3-3,#col4-3{
+     
+    padding-left:5% ;
+    padding-right:5% ;
+    padding-bottom: 10%; 
+    
+}
+ #col1-3i,#col2-3i,#col3-3i,#col4-3i{
+    border: 1px solid #2E2E2E;
+    padding: 5%;
+}
+
 #main4{
     background-color:#2E2E2E;
     display: flex; 
     justify-content: center; 
     align-items: center;
-    margin: 0;
-    padding: 0; 
-    height: 100%; 
-    width: 100%; 
+    
 }
 
 #main4 img {
     max-width: 100%; 
     height: auto;    
+}
+h4{
+    font-family: ManropeSB ;
+    padding: 5%;
+    
+}
+h6{
+    font-family:SoraM ;
+    padding: 2%;  
+}
+p{
+    font-family:MulishR ;
 }
 
 footer{
@@ -286,6 +326,7 @@ footer{
         margin-right: 7%;
         width: 9%;
     }
+
     #produzidopor hr {
         margin-top: -10px;
         width: 90%;
@@ -300,10 +341,6 @@ footer{
 }
 
 @media (min-width: 1910px) {
-    
-    #main1-a {
-        padding-top: 15%; 
-    }
     
     #foto1 img, #foto2 img, #foto3 img{
         width: 60%; 
