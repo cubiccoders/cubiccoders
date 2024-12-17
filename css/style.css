@@ -56,8 +56,8 @@
 }
 
 @font-face {
-    font-family: SoraM;
-    src: url(../letras/Sora-Medium.ttf);
+    font-family: SoraB;
+    src: url(../letras/Sora-Bold.ttf);
 }
 
 @font-face {
@@ -96,7 +96,7 @@ header {
 #main1-a, #main1-b, #main1-c {
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 3s ease-in-out, transform 3s ease-in-out;
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
     visibility: hidden;
 }
 
@@ -129,19 +129,26 @@ header {
 }
 
 #main2{
-    background-color: #2E2E2E;
-    color: black;
-    justify-content: center;
+   
     text-align: center; 
+    background-color:white;
+    color: white;
     
+}
+#main2 .col {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+    visibility: hidden;
 }
 
-#col1-2i,#col2-2i,#col3-2i,#col4-2i{
-    
-    border-radius: 10%;
-    background-color: white;
-    
+
+#main2 .col.visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
 }
+
 
 #col1-2,#col2-2,#col3-2,#col4-2{
     padding-left:5% ;
@@ -150,16 +157,33 @@ header {
     
 }
 
+#col1-2i,#col2-2i,#col3-2i,#col4-2i{
+    border: 1px solid #2E2E2E;
+    background-color: black; border-radius: 5px;
+    height: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
+    
+}
+
+
 #main3{
     text-align: center; 
     background-color:white;
-    color: white;
+    color:black;
+    
    
 }
+#main3 .col {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+    visibility: hidden;
+}
 
-#col1-3i,#col2-3i,#col3-3i,#col4-3i{
-    border-radius: 10%;
-    background-color:#2E2E2E ;
+#main3 .col.visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
 }
 
 #col1-3,#col2-3,#col3-3,#col4-3{
@@ -169,16 +193,41 @@ header {
     padding-bottom: 10%; 
     
 }
- #col1-3i,#col2-3i,#col3-3i,#col4-3i{
-    border: 1px solid #2E2E2E;
-    padding: 5%;
+
+#col1-3i,#col2-3i,#col3-3i,#col4-3i{
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 5px;
+    height: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+   
+    
 }
+
+#h4main{
+    color: black;
+    font-family: ManropeSB ;
+    padding: 5%;
+    
+}
+#h6main{
+    font-family:SoraB ;
+    padding: 10%;  
+}
+#pmain{
+    font-family:WorkSansL;
+    padding: 2%;  
+}
+
+ 
 
 #main4{
     background-color:#2E2E2E;
     display: flex; 
     justify-content: center; 
     align-items: center;
+    position: relative;
+    display: inline-block;
     
 }
 
@@ -186,18 +235,21 @@ header {
     max-width: 100%; 
     height: auto;    
 }
-h4{
-    font-family: ManropeSB ;
-    padding: 5%;
-    
+#text-overlay {
+    position: absolute;
+    top: 45%; 
+    left: 75%; 
+    transform: translate(-50%, -50%); 
+    font-family:OutfitB;
+    font-size: 200%; 
+    color: white;
+    text-align: center; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 1%;
+    border-radius: 5px; 
 }
-h6{
-    font-family:SoraM ;
-    padding: 2%;  
-}
-p{
-    font-family:MulishR ;
-}
+
+
 
 footer{
     padding-top: 2%;
@@ -274,14 +326,16 @@ footer{
 }
 
 @media (max-width: 767px) {
-    
+    #main2 .col, #main3 .col {
+        flex: 0 0 100%; 
+        max-width: 100%; 
+    }
     #logotipo img{
-        max-width: 80%; 
+        max-width: 100%; 
         height: auto; 
     }
 
     #frase1 {
-        padding-top: 50%;
         text-align: center;
         font-family: WorkSansL;
         font-size: 110%;
@@ -301,10 +355,29 @@ footer{
         justify-content: center; 
         align-items: center; 
     }
-
+    #h4main{
+        
+        font-size: 120%;
+        
+    }
+    
+    #h6main{
+        font-family:SoraB ;
+        padding: 10%;  
+    }
+    #pmain{
+        font-family:WorkSansL;
+        padding: 2%;  
+    }
+    #main3{
+        padding-bottom: 50%;
+    }
     #main4 img {
         max-width: 100%; 
-        height:auto;  
+        height:100px;  
+    }
+    #text-overlay {
+        font-size: 100%;  
     }
         
     #pmidias1{
