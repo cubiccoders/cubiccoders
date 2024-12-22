@@ -176,7 +176,7 @@
         <div id="produzidopor">
             <hr style="border: none; height: 1px; background-color: white">
             Website elaborado por 
-            <a href="https://cubiccoders.com/CubicCoders/" id="empresa"  style="text-decoration: none">CUBIC CODERS</a>-2024
+            <a href="https://cubiccoders.com/CubicCoders/" id="empresa"  style="text-decoration: none">CUBIC CODERS</a>-<span id="ano">2024</span>
         </div>
     </footer>
     
@@ -226,6 +226,10 @@ document.addEventListener("DOMContentLoaded", () => {
    
    handleScrollEffect();
 });
+
+const anoElemento = document.getElementById('ano');
+const anoAtual = new Date().getFullYear();
+anoElemento.textContent = anoAtual;
 
     </script>
     
